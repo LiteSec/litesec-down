@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Maintence - LiteSec</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                padding: 0; margin: 0;
+                background: #0d0d0e;
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal style="max-width: 100%; max-height: 660px;">
+            <span data-ty="input">curl litesec.co</span>
+            <span data-ty>curl: (28) Connection timed out</span>
+            <span data-ty></span>
+            <span data-ty="input">ping litesec.co</span>
+            <span data-ty>PING litesec.co (104.21.94.113): 56 data bytes</span>
+            <span data-ty>Request timeout for icmp_seq 0</span>
+            <span data-ty>Request timeout for icmp_seq 1</span>
+            <span data-ty>^C<br>--- litesec.co ping statistics ---<br>2 packets transmitted, 0 packets received, 100.0% packet loss</span>
+            <span data-ty></span>
+            <span data-ty="clearinput" data-ty-prompt="$">curl https://down.litesec.co/status.txt</span>
+            <span data-ty>Unfortunately, LiteSec is offline due to a planned outage.<br><br>We aim to have services restored within the next coming days. Some essential services have been migrated to other nodes via DNS, and should continue working as normal.<br><br>For status updates, check our Twitter at <a href="https://twitter.com/litesecco">twitter.com/litesecco</a>.<br><br>Our emails continue to operate as normal. If you need to get in touch urgently, feel free to send us a message at <a href="mailto:hello@litesec.co">hello@litesec.co</a>.<br><br>We apologise for any inconvenience this may cause.</span>
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+</html>
